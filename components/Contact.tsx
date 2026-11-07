@@ -72,7 +72,7 @@ export default function Contact() {
         out(<span className="text-muted">Generating ATS-optimized PDF…</span>)
         downloadResume().then(() => out(<span className="text-emerald-200">✓ Venugopal_Software_Engineer_Resume.pdf downloaded</span>)); break
       case 'whoami':
-        out(<span>Venugopal — Software Engineer (React.js, React Native, Node.js) in Madurai, India. I own hard problems end to end and ship them clean.</span>); break
+        out(<span>Venugopal — Software Engineer (React.js, React Native, Node.js) in Tirunelveli, India. I own hard problems end to end and ship them clean.</span>); break
       case 'copy':
         copy().then((ok) => out(ok ? <span className="text-emerald-200">✓ copied {PROFILE.email}</span> : <span>Clipboard blocked — select it here: <span className="select-all text-fg">{PROFILE.email}</span></span>)); break
       case 'clear': setLines([]); break
@@ -138,7 +138,7 @@ export default function Contact() {
         <div className="container-site flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="font-mono text-sm text-fg">venugopal<span className="text-muted">.dev</span></p>
-            <p className="mt-1 text-xs text-muted">Designed and built by hand in Madurai — no templates. Next.js, Tailwind CSS &amp; Framer Motion.</p>
+            <p className="mt-1 text-xs text-muted">Designed and built by hand in Tirunelveli — no templates. Next.js, Tailwind CSS &amp; Framer Motion.</p>
             <p className="mt-1 text-xs text-muted">© {new Date().getFullYear()} Venugopal</p>
           </div>
           <nav aria-label="Footer"><ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">

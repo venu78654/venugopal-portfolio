@@ -7,7 +7,7 @@ import { AlertTriangle, CheckCircle2, Plus, RotateCcw, Wand2 } from 'lucide-reac
 /* ---------------- Slot / timezone demo ---------------- */
 const SLOTS_UTC = ['2026-11-12T03:30:00Z', '2026-11-12T05:00:00Z', '2026-11-12T08:30:00Z', '2026-11-12T11:00:00Z', '2026-11-12T13:30:00Z', '2026-11-12T16:00:00Z']
 const ZONES = [
-  { id: 'Asia/Kolkata', label: 'IST · Madurai' },
+  { id: 'Asia/Kolkata', label: 'IST · Tirunelveli' },
   { id: 'Asia/Dubai', label: 'GST · Dubai' },
   { id: 'America/New_York', label: 'EST · New York' },
   { id: 'Asia/Singapore', label: 'SGT · Singapore' },

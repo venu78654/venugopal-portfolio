@@ -12,9 +12,9 @@ const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Venugopal — Software Engineer · React, React Native, Node.js',
-  description: 'Software Engineer from Madurai specializing in React.js, React Native and Node.js. Low-code UI frameworks, resilient payment pipelines and scalable enterprise products.',
+  description: 'Software Engineer from Tirunelveli specializing in React.js, React Native and Node.js. Low-code UI frameworks, resilient payment pipelines and scalable enterprise products.',
   authors: [{ name: 'Venugopal' }],
-  keywords: ['Venugopal', 'Software Engineer', 'React', 'React Native', 'Next.js', 'Node.js', 'Frontend Developer', 'Madurai'],
+  keywords: ['Venugopal', 'Software Engineer', 'React', 'React Native', 'Next.js', 'Node.js', 'Frontend Developer', 'Tirunelveli'],
   icons: { icon: `${base}/favicon.svg` },
   openGraph: {
     title: 'Venugopal — Software Engineer',
