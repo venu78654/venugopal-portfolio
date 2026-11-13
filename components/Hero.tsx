@@ -70,7 +70,7 @@ export default function Hero() {
 
         <motion.div initial={{ opacity: 0, y: 30, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.9, delay: 0.25, ease }}>
           <div className="relative">
-            <HandNote arrow="down-right" rotate={-4} className="absolute -top-16 left-2 hidden lg:block">the actual reducer pattern I use — try pausing it</HandNote>
+            <HandNote arrow="down-right" rotate={-4} className="absolute -top-16 left-2 hidden lg:block">three slices of my real work. click a tab</HandNote>
             <HeroTerminal />
           </div>
         </motion.div>

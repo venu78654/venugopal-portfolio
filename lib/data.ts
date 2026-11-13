@@ -1,11 +1,11 @@
 export const PROFILE = {
   name: 'Venugopal',
   role: 'Software Engineer',
-  location: 'Tirunelveli, Tamil Nadu, India',
+  location: 'Madurai, Tamil Nadu, India',
   email: 'venugopal1027517@gmail.com',
   // Update these two with your exact profile URLs
-  linkedin: 'https://www.linkedin.com/in/venugopal-annamalai/',
-  github: 'https://github.com/venu78654',
+  linkedin: 'https://www.linkedin.com/in/venugopal1027517', // TODO: replace with your real LinkedIn URL
+  github: 'https://github.com/venugopal1027517', // TODO: replace with your real GitHub URL
 }
 
 export const NAV = [

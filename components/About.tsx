@@ -15,7 +15,7 @@ const BELIEFS = [
 const NOW = [
   ['Building', 'Web & mobile products at Gove Technologies'],
   ['Exploring', 'Next.js App Router & React Server Components'],
-  ['Based in', 'Tirunelveli, India · IST (UTC+05:30)'],
+  ['Based in', 'Madurai, India · IST (UTC+05:30)'],
   ['Open to', 'Frontend, React Native & Full-Stack roles'],
 ]
 
@@ -34,7 +34,7 @@ export default function About() {
             </motion.div>
             <figcaption className="mt-4 flex items-baseline justify-between px-1">
               <span className="font-hand text-2xl text-[#F5D58A]">that’s me — Venu</span>
-              <span className="font-mono text-[11px] text-muted">Tirunelveli, TN</span>
+              <span className="font-mono text-[11px] text-muted">Madurai, TN</span>
             </figcaption>
           </figure>
         </Reveal>
@@ -44,7 +44,7 @@ export default function About() {
             <p className="eyebrow mb-4">About</p>
             <h2 id="about-title" className="text-3xl font-semibold leading-[1.1] text-fg outline-none sm:text-4xl md:text-[2.75rem]">Hi, I’m Venugopal.</h2>
             <div className="mt-6 max-w-[60ch] space-y-5 text-base leading-[1.75] text-muted md:text-[17px]">
-              <p>I’m a software engineer from <span className="text-fg">Tirunelveli</span>. I got into this the way a lot of us do — by breaking things until they finally made sense.</p>
+              <p>I’m a software engineer from <span className="text-fg">Madurai</span>. I got into this the way a lot of us do — by breaking things until they finally made sense.</p>
               <p>These days I spend most of my time on <span className="text-fg">React and React Native</span> apps at Gove Technologies, and on the unglamorous parts behind them: payment states, booking slots, and yes, timezones. Lots of timezones.</p>
               <p>The part of the job I enjoy most is the moment a messy, cross-platform bug finally gives up its root cause. I like being the person a team can hand a hard ticket to — and not have to worry about it again.</p>
             </div>
