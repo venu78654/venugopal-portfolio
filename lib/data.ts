@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
 export const SKILLS: { group: string; items: string[] }[] = [
   { group: 'Frontend & Mobile', items: ['React.js', 'React Native', 'Next.js', 'TypeScript', 'JavaScript (ES6+)', 'Material UI', 'HTML5 / CSS3', 'Responsive design'] },
   { group: 'Backend & Database', items: ['Node.js', 'REST API design', 'Prisma ORM', 'PostgreSQL', 'Relational databases'] },
-  { group: 'Tools & Practices', items: ['Git / GitHub', 'Docker', 'CI/CD', 'Agile / Scrum', 'Payment gateways (Stripe, Razorpay)', 'Performance optimization', 'Cross-platform debugging'] },
+  { group: 'Tools & Practices', items: ['Git / GitHub', 'CI/CD', 'Agile / Scrum', 'Payment gateways (Razorpay)', 'Performance optimization', 'Cross-platform debugging'] },
 ]
 
 // Used for the resume PDF
