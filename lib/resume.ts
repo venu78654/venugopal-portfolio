@@ -1,6 +1,6 @@
-import { PROFILE, EXPERIENCE, PROJECTS, SKILLS } from './data'
+import { PROFILE, EXPERIENCE, PROJECTS, SKILL_CATS } from './data'
 
-// Generates a single-column, text-based (ATS-parsable) PDF entirely in the browser.
+// Generates a simple single-column, text-based PDF entirely in the browser.
 export async function downloadResume() {
   const { jsPDF } = await import('jspdf')
   const doc = new jsPDF({ unit: 'pt', format: 'a4' })
@@ -31,10 +31,10 @@ export async function downloadResume() {
   doc.setTextColor(10, 10, 10)
   text(PROFILE.name.toUpperCase(), 20, 'bold', 6)
   text('Software Engineer — React.js · React Native · Node.js', 11, 'normal', 6)
-  text(`${PROFILE.email}  |  ${PROFILE.location}  |  ${PROFILE.linkedin.replace('https://', '')}  |  ${PROFILE.github.replace('https://', '')}`, 9, 'normal', 4)
+  text(`${PROFILE.email}  |  ${PROFILE.location} (${PROFILE.relocate.toLowerCase()})  |  ${PROFILE.linkedin.replace('https://', '')}  |  ${PROFILE.github.replace('https://', '')}`, 9, 'normal', 4)
 
   heading('Summary')
-  text('Software Engineer with 2+ years of experience architecting low-code UI frameworks, resilient payment pipelines, and scalable enterprise products across Web and Mobile. Known for high ownership: solving complex cross-platform bugs independently without creating technical debt, and writing code that directly reduces delivery time.', 10, 'normal', 4)
+  text('Software Engineer with 3+ years of experience architecting low-code UI frameworks, resilient payment pipelines, and scalable enterprise products across Web and Mobile. Known for high ownership: solving complex cross-platform bugs independently without creating technical debt, and writing code that directly reduces delivery time.', 10, 'normal', 4)
 
   heading('Experience')
   for (const e of EXPERIENCE) {
@@ -62,10 +62,9 @@ export async function downloadResume() {
   bullet('Production-grade React.js & React Native applications serving live daily active users.')
 
   heading('Technical Skills')
-  const by = (c: string) => SKILLS.filter((s) => s.cat === c).map((s) => s.name).join(', ')
-  text(`Frontend & Mobile: ${by('frontend')}`, 10, 'normal', 5)
-  text(`Backend & Data: ${by('backend')}`, 10, 'normal', 5)
-  text(`Tools & Workflow: ${by('tools')}`, 10, 'normal', 5)
+  text(`Frontend & Mobile: ${SKILL_CATS.frontend}`, 10, 'normal', 5)
+  text(`Backend & Data: ${SKILL_CATS.backend}`, 10, 'normal', 5)
+  text(`Tools & Workflow: ${SKILL_CATS.tools}`, 10, 'normal', 5)
 
   doc.setProperties({ title: `${PROFILE.name} — Resume`, subject: 'Software Engineer Resume', author: PROFILE.name, keywords: 'React, React Native, Node.js, TypeScript, Prisma, PostgreSQL' })
   doc.save('Venugopal_Software_Engineer_Resume.pdf')

@@ -15,7 +15,6 @@ export default {
         cyan: { DEFAULT: '#22D3EE', soft: '#67E8F9' },
       },
       fontFamily: {
-        hand: ['var(--font-hand)', 'cursive'],
         sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', '"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },

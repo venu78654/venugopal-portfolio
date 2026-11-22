@@ -1,60 +1,36 @@
 'use client'
 
-import { motion, useInView, animate } from 'framer-motion'
-import { useEffect, useRef, useState, type ReactNode, type PointerEvent } from 'react'
+import { motion } from 'framer-motion'
+import type { ReactNode } from 'react'
 
 export function scrollToId(id: string) {
   const el = document.getElementById(id)
   if (!el) return
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' })
-  // move focus for keyboard + screen reader users
-  const heading = el.querySelector<HTMLElement>('h2, h1')
-  if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }) }
 }
 
-export function onSpot(e: PointerEvent<HTMLElement>) {
-  const r = e.currentTarget.getBoundingClientRect()
-  e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`)
-  e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`)
-}
-
-export function Reveal({ children, delay = 0, className = '', y = 18, as = 'div', ...rest }: { children: ReactNode; delay?: number; className?: string; y?: number; as?: 'div' | 'li' | 'article' } & Record<string, unknown>) {
-  const M = (as === 'li' ? motion.li : as === 'article' ? motion.article : motion.div) as typeof motion.div
+export function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
-    <M
-      {...rest}
+    <motion.div
       className={className}
-      initial={{ opacity: 0, y }}
+      initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.5 }}
     >
       {children}
-    </M>
+    </motion.div>
   )
 }
 
-export function Counter({ to, from = 0, duration = 1.6 }: { to: number; from?: number; duration?: number }) {
-  const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-40px' })
-  const [val, setVal] = useState(from)
-  useEffect(() => {
-    if (!inView) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { setVal(to); return }
-    const c = animate(from, to, { duration, ease: [0.16, 1, 0.3, 1], onUpdate: (v) => setVal(Math.round(v)) })
-    return () => c.stop()
-  }, [inView, from, to, duration])
-  return <span ref={ref} className="tabular-nums">{val}</span>
-}
-
-export function SectionHead({ eyebrow, title, intro, id }: { eyebrow: string; title: ReactNode; intro?: string; id: string }) {
+export function SectionHead({ eyebrow, title, intro }: { eyebrow: string; title: string; intro?: string }) {
   return (
-    <Reveal className="mb-12 max-w-2xl md:mb-16">
-      <p className="eyebrow mb-4">{eyebrow}</p>
-      <h2 id={`${id}-title`} className="text-3xl font-semibold leading-[1.1] text-fg outline-none sm:text-4xl md:text-[2.75rem]">{title}</h2>
-      {intro && <p className="mt-5 text-base leading-relaxed text-muted md:text-lg">{intro}</p>}
-    </Reveal>
+    <div className="mb-10 max-w-2xl">
+      <p className="eyebrow mb-3">{eyebrow}</p>
+      <h2 className="text-3xl font-semibold text-fg sm:text-4xl">{title}</h2>
+      {intro && <p className="mt-4 text-base leading-relaxed text-muted">{intro}</p>}
+    </div>
   )
 }
 

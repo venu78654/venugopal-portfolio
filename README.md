@@ -1,7 +1,7 @@
 # Venugopal — Developer Portfolio
 
 Personal portfolio for **Venugopal**, Software Engineer (React.js · React Native · Node.js), built with
-**Next.js 15 (App Router)**, **Tailwind CSS** and **Framer Motion**. It exports to a fully static site, so it
+**Next.js 15 (App Router)**, **Tailwind CSS** and a little **Framer Motion**. It exports to a fully static site, so it
 runs anywhere: GitHub Pages, Vercel, Netlify or any static host.
 
 ## Quick start
@@ -20,9 +20,9 @@ Requires Node.js 18.18+ (20 LTS recommended).
 | What | File |
 | --- | --- |
 | Name, email, LinkedIn, GitHub | `lib/data.ts` → `PROFILE` |
-| Metrics, projects, skills, experience | `lib/data.ts` |
-| About text, beliefs, "Right now" box | `components/About.tsx` |
-| Resume PDF content | `lib/resume.ts` (generated in the browser, ATS-friendly) |
+| Projects, skills, experience | `lib/data.ts` |
+| About text and details box | `components/About.tsx` |
+| Resume PDF content | `lib/resume.ts` (generated in the browser) |
 | Photo | `public/venugopal-portrait.webp` (keep the same filename, 4:5 ratio) |
 | Colors, fonts | `tailwind.config.js`, `app/layout.tsx` |
 | SEO title / description | `app/layout.tsx` → `metadata` |
