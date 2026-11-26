@@ -42,7 +42,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
-            I’m a software engineer with 3+ years of experience in <span className="text-fg">React.js, React Native and Node.js</span>. I work on booking and payment flows, shared UI code and internal tools.
+            I’m a software engineer with 2+ years of experience in <span className="text-fg">React.js, React Native and Node.js</span>. I work on booking and payment flows, shared UI code and internal tools.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

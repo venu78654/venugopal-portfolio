@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="work" className="border-t border-line bg-ink2/60 py-20 sm:py-28">
       <div className="container-site">
-        <SectionHead eyebrow="Work" title="Projects" intro="Two things I’ve worked on, with the problem, what I did, and the result." />
+        <SectionHead eyebrow="Work" title="Projects" intro="Some things I’ve worked on, with what I did and the result." />
         <div className="space-y-6">
           {PROJECTS.map((p) => (
             <Reveal key={p.id}>
@@ -13,13 +13,15 @@ export default function Projects() {
                 <p className="font-mono text-xs text-cyan-soft">{p.kicker}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-fg">{p.title}</h3>
 
-                <div className="mt-6 grid gap-8 md:grid-cols-2">
-                  <div>
-                    <h4 className="mb-3 text-sm font-semibold text-fg">The problem</h4>
-                    <ul className="space-y-2 text-sm leading-relaxed text-muted">
-                      {p.problem.map((x) => <li key={x} className="flex gap-3"><span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" />{x}</li>)}
-                    </ul>
-                  </div>
+                <div className={`mt-6 grid gap-8 ${p.problem ? 'md:grid-cols-2' : ''}`}>
+                  {p.problem && (
+                    <div>
+                      <h4 className="mb-3 text-sm font-semibold text-fg">The problem</h4>
+                      <ul className="space-y-2 text-sm leading-relaxed text-muted">
+                        {p.problem.map((x) => <li key={x} className="flex gap-3"><span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" />{x}</li>)}
+                      </ul>
+                    </div>
+                  )}
                   <div>
                     <h4 className="mb-3 text-sm font-semibold text-fg">What I did</h4>
                     <ul className="space-y-2 text-sm leading-relaxed text-muted">

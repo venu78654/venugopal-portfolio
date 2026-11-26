@@ -5,8 +5,8 @@ export const PROFILE = {
   relocate: 'Open to relocate',
   email: 'venugopal1027517@gmail.com',
   // Update these two with your exact profile URLs
-  linkedin: 'https://www.linkedin.com/in/venugopal-annamalai/',   
-  github: 'https://github.com/venu78654',
+  linkedin: 'https://www.linkedin.com/in/venugopal1027517', // TODO: replace with your real LinkedIn URL
+  github: 'https://github.com/venugopal1027517', // TODO: replace with your real GitHub URL
 }
 
 export const NAV = [
@@ -21,7 +21,7 @@ export type Project = {
   id: string
   title: string
   kicker: string
-  problem: string[]
+  problem?: string[]
   solution: string[]
   outcomes: string[]
   tech: string[]
@@ -61,12 +61,24 @@ export const PROJECTS: Project[] = [
     outcomes: ['40% less custom UI dev time', 'Config-first delivery', 'Reusable typed building blocks'],
     tech: ['TypeScript', 'React.js', 'Shared Memory State', 'JSON Schema'],
   },
+  {
+    id: 'sso',
+    kicker: 'Gove Technologies',
+    title: 'Centralized SSO & Identity Management Platform',
+    solution: [
+      'Built a central sign-in platform with Next.js, Node.js and Keycloak, so multiple applications share one login and role-based access.',
+      'Added credential checks, access and refresh tokens, cookie-based authentication, and Next.js server-side checks to protect pages.',
+      'Built registration, login, password recovery, email/SMS OTP verification and a single logout, plus reusable client integration support for other apps.',
+    ],
+    outcomes: ['One login across multiple apps', 'Consistent access management', 'Reusable integration for new apps'],
+    tech: ['Next.js', 'Node.js', 'Keycloak', 'SSO', 'SSR', 'Cookie-based auth'],
+  },
 ]
 
 export const SKILLS: { group: string; items: string[] }[] = [
   { group: 'Frontend & Mobile', items: ['React.js', 'React Native', 'Next.js', 'TypeScript', 'JavaScript (ES6+)', 'Material UI', 'HTML5 / CSS3', 'Responsive design'] },
-  { group: 'Backend & Database', items: ['Node.js', 'REST API design', 'Prisma ORM', 'PostgreSQL', 'Relational databases'] },
-  { group: 'Tools & Practices', items: ['Git / GitHub', 'CI/CD', 'Agile / Scrum', 'Payment gateways (Razorpay)', 'Performance optimization', 'Cross-platform debugging'] },
+  { group: 'Backend & Database', items: ['Node.js', 'REST API design', 'Prisma ORM', 'PostgreSQL', 'Relational databases', 'Keycloak (SSO)', 'Token & cookie-based auth'] },
+  { group: 'Tools & Practices', items: ['Git / GitHub', 'Docker', 'CI/CD', 'Agile / Scrum', 'Payment gateways (Stripe, Razorpay)', 'Performance optimization', 'Cross-platform debugging'] },
 ]
 
 // Used for the resume PDF
@@ -87,6 +99,7 @@ export const EXPERIENCE = [
       ['Engineered', 'a state-machine payment pipeline (QR + REST polling) across Web and React Native with zero reconciliation discrepancies.'],
       ['Spearheaded', 'the platform-wide fix for UTC/timezone edge cases, standardizing on UTC storage and edge-only formatting.'],
       ['Optimized', 'slot-selection logic and shared component architecture to remove booking bugs and cross-platform UI drift.'],
+      ['Built', 'a centralized SSO and identity platform (Next.js, Node.js, Keycloak) with OTP verification and reusable client integration, so multiple apps share one login.'],
       ['Collaborated', 'in Agile sprints and daily standups; wrote technical specs and worked with product, QA and backend engineers.'],
     ] as [string, string][],
     tags: ['React.js', 'React Native', 'Node.js', 'Prisma', 'TypeScript'],

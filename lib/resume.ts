@@ -34,7 +34,7 @@ export async function downloadResume() {
   text(`${PROFILE.email}  |  ${PROFILE.location} (${PROFILE.relocate.toLowerCase()})  |  ${PROFILE.linkedin.replace('https://', '')}  |  ${PROFILE.github.replace('https://', '')}`, 9, 'normal', 4)
 
   heading('Summary')
-  text('Software Engineer with 3+ years of experience architecting low-code UI frameworks, resilient payment pipelines, and scalable enterprise products across Web and Mobile. Known for high ownership: solving complex cross-platform bugs independently without creating technical debt, and writing code that directly reduces delivery time.', 10, 'normal', 4)
+  text('Software Engineer with 2+ years of experience architecting low-code UI frameworks, resilient payment pipelines, and scalable enterprise products across Web and Mobile. Known for high ownership: solving complex cross-platform bugs independently without creating technical debt, and writing code that directly reduces delivery time.', 10, 'normal', 4)
 
   heading('Experience')
   for (const e of EXPERIENCE) {
