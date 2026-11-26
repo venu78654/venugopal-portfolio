@@ -5,8 +5,8 @@ export const PROFILE = {
   relocate: 'Open to relocate',
   email: 'venugopal1027517@gmail.com',
   // Update these two with your exact profile URLs
-  linkedin: 'https://www.linkedin.com/in/venugopal1027517', // TODO: replace with your real LinkedIn URL
-  github: 'https://github.com/venugopal1027517', // TODO: replace with your real GitHub URL
+  linkedin: 'https://www.linkedin.com/in/venugopal-annamalai', // TODO: replace with your real LinkedIn URL
+  github: 'https://github.com/venu78654', // TODO: replace with your real GitHub URL
 }
 
 export const NAV = [
